@@ -1,8 +1,8 @@
+import { Homepage } from "./features/Homepage";
+
 function App() {
   return (
-    <div>
-      Hello React
-    </div>
+    <Homepage />
   );
 }
 
