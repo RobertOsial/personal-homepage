@@ -8,18 +8,19 @@ import {
   Title,
   Wrapper
 } from "./styled";
+import image from "../images/profile.jpg"
 
-export const Header = () => {
+export const MainInformation = () => {
   return (
     <Wrapper>
-      <ProfileImage src="https://picsum.photos/200/300?random=2"></ProfileImage>
+      <ProfileImage src={image} alt="Robert Osial"></ProfileImage>
       <Content>
         <Introduction>THIS IS</Introduction>
         <Title>Robert Osial</Title>
         <AboutMe>I'm a passionate Frontend Develooper in love wirh React, currently looking for new jobs</AboutMe>
         <Button>
           <ButtonIcon />
-          <span>Hire Me</span>
+          Hire Me
         </Button>
       </Content>
     </Wrapper>
