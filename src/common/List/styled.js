@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  color: ${({ theme }) => theme.color.darkGrey};
+  color: ${({ theme }) => theme.color.slateGray};
   padding: 0;
   list-style: none;
   line-height:  1.4;
@@ -23,7 +23,7 @@ export const ListItem = styled.li`
     transform: translateY(-50%); 
     width: 9px;
     height: 9px;
-    background-color: ${({ theme }) => theme.color.blue};
+    background-color: ${({ theme }) => theme.color.scienceBlue};
     border-radius: 50%;
   }
 `;
