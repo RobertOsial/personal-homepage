@@ -13,5 +13,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     background-color: ${({theme}) => theme.color.whiteLilac};
+    color: ${({ theme }) => theme.color.slateGray};
   }
 `;
