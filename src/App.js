@@ -1,8 +1,12 @@
+
 import { Homepage } from "./features/Homepage";
 
-function App() {
+const App = () => {
+
   return (
-    <Homepage />
+    <>
+      <Homepage />
+    </>
   );
 }
 
