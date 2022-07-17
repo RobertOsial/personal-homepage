@@ -5,9 +5,9 @@ export const Wrapper = styled.li`
   max-width: 592px;
   height: 322px;
   padding: 32px;
-  background-color: ${({ theme }) => theme.color.white};
-  box-shadow: ${({ theme }) => theme.common.boxShadow};
-  border: 6px solid ${({ theme }) => theme.color.ironTransparent};
+  background-color: ${({ theme }) => theme.colors.boxBackground};
+  box-shadow: ${({ theme }) => theme.boxShadow};
+  border: 6px solid ${({ theme }) => theme.colors.tile.border};
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ export const Wrapper = styled.li`
 `;
 
 export const Title = styled.h3`
-  color: ${({ theme }) => theme.color.scienceBlue};
+  color: ${({ theme }) => theme.colors.primary};
   font-weight: 700;
   font-size: 24px;  
   margin: 0 0 24px;
@@ -46,7 +46,7 @@ export const LinksValue = styled.dd`
 `
 
 export const Link = styled.a`
-  color: ${({theme}) => theme.color.scienceBlue};
+  color: ${({theme}) => theme.colors.primary};
   font-weight: 400;
   font-size: 18px;
   text-decoration: none;

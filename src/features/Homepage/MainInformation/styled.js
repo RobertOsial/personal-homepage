@@ -25,7 +25,7 @@ margin: 0 0 12px;
 `;
 
 export const Title = styled.h1`
-  color: ${({ theme }) => theme.color.mineShaft};
+  color: ${({ theme }) => theme.colors.textPrimary};
   font-weight: 900;
   font-size: 38px;
   margin: 0 0 35px;
@@ -37,16 +37,18 @@ export const AboutMe = styled.p`
   margin: 0 0 32px;
 `;
 
-export const Button = styled.button`
-  color: ${({ theme }) => theme.color.white};
-  background-color: ${({ theme }) => theme.color.scienceBlue};
+export const ButtonLink = styled.a`
+  color: ${({ theme }) => theme.colors.buttonLink.text};
+  background-color: ${({ theme }) => theme.colors.primary};
   padding: 12px 16px;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.borderRadiusSmall};
   font-weight: 600;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(209, 213, 218, 0.3);
+  border: 1px solid ${({theme}) => theme.colors.buttonLink.border};
   gap: 16px;
+  text-decoration: none;
+  width: 150px;
 `;
 
 export const ButtonIcon = styled(EnvelopeIcon)`

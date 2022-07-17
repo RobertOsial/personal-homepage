@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.footer`
-  color: ${({ theme }) => theme.color.mineShaft};
+  color: ${({ theme }) => theme.colors.textPrimary};
 `;
 
 export const Address = styled.address`
@@ -9,7 +9,7 @@ export const Address = styled.address`
 `;
 
 export const LetsTalk = styled.h2`
-  color: ${({ theme }) => theme.color.slateGray};
+  color: ${({ theme }) => theme.colors.site.text};
   font-weight: 700;
   font-size: 12px;
   line-height: 1.3;
