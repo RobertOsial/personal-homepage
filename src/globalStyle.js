@@ -12,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: ${({theme}) => theme.color.whiteLilac};
-    color: ${({ theme }) => theme.color.slateGray};
+    background-color: ${({theme}) => theme.colors.site.background};
+    color: ${({ theme }) => theme.colors.site.text};
     letter-spacing: 0.05em;
   }
 `;
