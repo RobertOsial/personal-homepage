@@ -45,10 +45,19 @@ export const ButtonLink = styled.a`
   font-weight: 600;
   display: flex;
   align-items: center;
-  border: 1px solid ${({theme}) => theme.colors.buttonLink.border};
+  border: 1px solid ${({ theme }) => theme.colors.buttonLink.border};
   gap: 16px;
   text-decoration: none;
   width: 150px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.buttonLink.shadow};
+  }
+
+  @media(max-width: ${({ theme }) => theme.breakpoints.mobileMix}px) {
+    font-size: 18px;
+  }
 `;
 
 export const ButtonIcon = styled(EnvelopeIcon)`
