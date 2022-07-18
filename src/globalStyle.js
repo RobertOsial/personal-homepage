@@ -15,5 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({theme}) => theme.colors.site.background};
     color: ${({ theme }) => theme.colors.site.text};
     letter-spacing: 0.05em;
+    word-break: break-word;
+    transition: background 0.3s;
   }
 `;
