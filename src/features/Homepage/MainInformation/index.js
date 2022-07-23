@@ -1,28 +1,28 @@
 import {
   AboutMe,
-  Button,
+  ButtonLink,
   ButtonIcon,
-  Content,
-  Introduction,
   ProfileImage,
-  Title,
-  Wrapper
+  Wrapper,
+  Name,
+  ThisIs
 } from "./styled";
-import image from "../images/profile.jpg"
+import robertOsialProfile from "./profile.jpg"
+import { email } from "../email";
 
 export const MainInformation = () => {
   return (
     <Wrapper>
-      <ProfileImage src={image} alt="Robert Osial"></ProfileImage>
-      <Content>
-        <Introduction>THIS IS</Introduction>
-        <Title>Robert Osial</Title>
-        <AboutMe>I'm a passionate Frontend Develooper in love wirh React, currently looking for new jobs</AboutMe>
-        <Button>
+      <ProfileImage src={robertOsialProfile} alt="Robert Osial"></ProfileImage>
+      <div>
+        <ThisIs>THIS IS</ThisIs>
+        <Name>Robert Osial</Name>
+        <AboutMe>I'm a passionate Frontend Develooper working in React, currently looking for new job opportunities</AboutMe>
+        <ButtonLink href={`mailto:${email}`} title={email}>
           <ButtonIcon />
-          Hire Me
-        </Button>
-      </Content>
+          <span>Hire Me</span>
+        </ButtonLink>
+      </div>
     </Wrapper>
   );
 }
