@@ -1,3 +1,4 @@
+import { ReactComponent as EnvelopeIcon } from "./envelope.svg";
 import {
   AboutMe,
   ButtonLink,
@@ -19,7 +20,7 @@ export const MainInformation = () => {
         <Name>Robert Osial</Name>
         <AboutMe>I'm a passionate Frontend Develooper working in React, currently looking for new job opportunities</AboutMe>
         <ButtonLink href={`mailto:${email}`} title={email}>
-          <ButtonIcon />
+          <EnvelopeIcon />
           <span>Hire Me</span>
         </ButtonLink>
       </div>
