@@ -1,5 +1,4 @@
-import { skills } from "../../features/Homepage/Skills/skills";
-import { ListItem, StyledList } from "./styled";
+import { StyledList } from "./styled";
 
 export const List = ({ listContent }) => {
   return (
