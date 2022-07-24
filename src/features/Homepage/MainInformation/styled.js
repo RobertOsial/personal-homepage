@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as EnvelopeIcon } from "./envelope.svg";
 
 export const Wrapper = styled.header`
   margin-top: -30px;
@@ -80,9 +79,5 @@ export const ButtonLink = styled.a`
   @media(max-width: ${({ theme }) => theme.breakpoints.mobileMix}px) {
     font-size: 18px;
   }
-`;
-
-export const ButtonIcon = styled(EnvelopeIcon)`
-
 `;
 
