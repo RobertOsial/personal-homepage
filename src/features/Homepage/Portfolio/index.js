@@ -19,7 +19,7 @@ export const Portfolio = () => {
   return (
     <section>
       <Header />
-      <Projects projects={repositories} repositoriesStatus={repositoriesStatus} />
+      <Projects projects={repositories} status={repositoriesStatus} />
     </section>
   );
 };
