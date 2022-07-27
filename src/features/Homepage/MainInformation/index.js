@@ -2,7 +2,6 @@ import { ReactComponent as EnvelopeIcon } from "./envelope.svg";
 import {
   AboutMe,
   ButtonLink,
-  ButtonIcon,
   ProfileImage,
   Wrapper,
   Name,
