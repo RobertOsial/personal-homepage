@@ -2,9 +2,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRepositories, selectRepositories, selectRepositoriesStatus } from "../hompageSlice";
-import { Header } from "./Header";
 import { Projects } from "./Projects";
 import { githubUsername } from "./githubaUsername";
+import { Header, Icon, SubTitle, Title } from "./styled";
 
 export const Portfolio = () => {
   const dispatch = useDispatch();
@@ -18,8 +18,15 @@ export const Portfolio = () => {
 
   return (
     <section>
-      <Header />
-      <Projects projects={repositories} status={repositoriesStatus} />
+      <Header>
+        <Icon />
+        <Title>Portfolio</Title>
+        <SubTitle>My recent projects</SubTitle>
+      </Header>
+      <Projects
+        projects={repositories}
+        status={repositoriesStatus}
+      />
     </section>
   );
 };
