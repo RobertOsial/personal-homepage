@@ -1,4 +1,4 @@
-import { ButtonLink } from "../../../MainInformation/styled";
+import { ButtonLink } from "../../../ButtonLink";
 import { githubUsername } from "../../githubaUsername";
 import { Header, Paragraph, WarningIcon, Wrapper } from "./styled";
 

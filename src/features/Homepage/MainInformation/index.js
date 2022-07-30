@@ -1,7 +1,6 @@
 import { ReactComponent as EnvelopeIcon } from "./envelope.svg";
 import {
   AboutMe,
-  ButtonLink,
   ProfileImage,
   Wrapper,
   Name,
@@ -9,6 +8,7 @@ import {
 } from "./styled";
 import robertOsialProfile from "./profile.jpg"
 import { email } from "../email";
+import { ButtonLink } from "../ButtonLink";
 
 export const MainInformation = () => {
   return (
