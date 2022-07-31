@@ -12,19 +12,21 @@ import {
 
 export const Repositories = ({ projects }) => (
   <List >
-    {projects.map(({ name, description, html_url, homepage }) => (
-      <Tile key={name}>
+    {projects.map(({ id, name, description, html_url, homepage }) => (
+      <Tile key={id}>
         <Title>{name}</Title>
         <Description>
           {description}
         </Description>
         <Links>
-          <LinksRow>
-            <dt>Demo:</dt>
-            <LinksValue>
-              <Link href={homepage}>{homepage}</Link>
-            </LinksValue>
-          </LinksRow>
+          {!!homepage && (
+            <LinksRow>
+              <dt>Demo:</dt>
+              <LinksValue>
+                <Link href={homepage}>{homepage}</Link>
+              </LinksValue>
+            </LinksRow>
+          )}
           <LinksRow>
             <dt>Repo:</dt>
             <LinksValue>
