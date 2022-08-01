@@ -1,5 +1,6 @@
 
 import styled from "styled-components";
+import α from "color-alpha";
 
 export const List = styled.ul`
   display: grid;
@@ -13,6 +14,10 @@ export const List = styled.ul`
     grid-template-columns: 1fr;
     grid-gap: 24px;
   }
+
+  @media(max-width: ${({theme}) => theme.breakpoints.mobileMax}px) {
+    margin-bottom: 48px;
+  }
 `;
 
 export const Tile = styled.li`
@@ -21,7 +26,7 @@ export const Tile = styled.li`
   background-color: ${({ theme }) => theme.colors.boxBackground};
   box-shadow: ${({ theme }) => theme.boxShadow};
   border: 6px solid ${({ theme }) => theme.colors.tile.border};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.borderRadiusSmall};
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -41,7 +46,7 @@ export const Title = styled.h3`
   font-size: 24px;  
   margin: 0;
 
-  @media(max-width: ${({theme}) => theme.breakpoints.mobileMax}px) {
+  @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     margin: 0;
   } 
 `;
@@ -59,6 +64,11 @@ export const Links = styled.dl`
   display: grid;
   grid-gap: 8px;
   margin: 0;
+  line-height: 1.6;
+
+  @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 14px;
+  }
 `;
 
 export const LinksRow = styled.div`
@@ -72,8 +82,11 @@ export const LinksValue = styled.dd`
 
 export const Link = styled.a`
   color: ${({ theme }) => theme.colors.primary};
-  font-weight: 400;
-  font-size: 18px;
   text-decoration: none;
-  border-bottom: 1px solid rgb(3, 102, 214, 0.2);
+  border-bottom: 1px solid ${({ theme }) => α(theme.colors.primary, 0.3)};
+  padding-bottom: 1px;
+
+  &:hover {
+    border-color: unset;
+  }
 `;

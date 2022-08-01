@@ -1,17 +1,18 @@
-import { List } from "../../../common/List";
-import { ListItem } from "../../../common/List/styled";
-import { Section } from "../../../common/Section";
-import { skills } from "./skills";
+import { Bullet, Item, List, Section, StyledHeader } from "./styled";
 
-export const Skills = () => {
-  const listContent = skills.map((skill, index) => (
-    <ListItem key={index}>{skill.content}</ListItem>
-  ));
+export const Skills = ({ skills, title }) => {
 
   return (
-    <Section
-      title="My skillset includes 🛠️"
-      body={<List listContent={listContent} />}
-    />
+    <Section>
+      <StyledHeader>{title}</StyledHeader>
+      <List>
+        {skills.map((skill) => (
+          <Item key={skill}>
+            <Bullet />
+            {skill}
+          </Item>
+        ))}
+      </List>
+    </Section>
   );
 }

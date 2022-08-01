@@ -15,6 +15,7 @@ export const Wrapper = styled.header`
   @media(max-width: ${({theme}) => theme.breakpoints.mobileMax}px) {
     grid-template-columns: 1fr;
     grid-gap: 12px;
+    margin-bottom: 48px;
   }
 `;
 
@@ -43,6 +44,7 @@ export const Name = styled.h1`
 
   @media(max-width: ${({theme}) => theme.breakpoints.mobileMax}px) {
     font-size: 22px;
+    margin-bottom: 16px;
   }
 `;
 

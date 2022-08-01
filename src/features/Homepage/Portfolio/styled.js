@@ -10,19 +10,12 @@ export const Header = styled.header`
 
 export const Icon = styled(GitHubIcon)`
   color: ${({ theme }) => theme.colors.primary};
-  margin: 0 0 12px;
+  margin-bottom: 12px;
 `;
 
-export const Title = styled.h2`
-  color: ${({ theme }) => theme.colors.textPrimary};
-  font-weight: 900;
-  font-size: 30px;
-  margin: 0 0 8px;
-`;
-
-export const SubTitle = styled.h3`
+export const MyRecentProjects = styled.h3`
   color: ${({ theme }) => theme.colors.textPrimary};
   font-weight: 400;
   font-size: 20px;
-  margin: 0 0 24px;
+  margin: 8px 0 0 0;
 `;

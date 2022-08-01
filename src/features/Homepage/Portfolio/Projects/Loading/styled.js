@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
 
   @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 17px;
-    margin-top: 32px;
+    margin: 24px 0 0 0;
   }
 `;
 
@@ -31,7 +31,7 @@ export const SpinnerIcon = styled(Spinner)`
   height: auto;
 
   @media(max-width: ${({theme}) => theme.breakpoints.mobileMax}px) {
-    margin: 32px 0 42px ;
+    margin: 16px 0 24px ;
     width: 60px;
   }
 `;
