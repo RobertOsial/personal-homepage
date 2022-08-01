@@ -8,7 +8,7 @@ export const List = styled.ul`
   grid-gap: 32px;
   list-style: none;
   padding: 0;
-  margin: 0 0 120px;
+  margin: 24px 0 120px;
 
   @media(max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) {
     grid-template-columns: 1fr;
