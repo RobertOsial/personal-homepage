@@ -1,30 +1,22 @@
-import { useEffect, useState } from "react";
-import { List } from "./styled";
-import { Tile } from "./Tile";
+import { Repositories } from "./Repositories";
+import { Loading } from "./Loading";
+import { ErrorBox } from "./ErrorBox";
 
-export const Projects = () => {
-  const [projects, setProjects] = useState([]);
+export const Projects = ({ projects, status }) => {
+  switch (status) {
+    case "initial":
+      return null;
 
-  useEffect(() => {
-    (async () => {
-      const response = await fetch("https://api.github.com/users/RobertOsial/repos");
-      const data = await response.json();
-      setProjects(data);
-    })();
-  }, []);
+    case "loading":
+      return <Loading />
 
+    case "error":
+      return <ErrorBox />
 
-  return (
-    <List>
-      {projects.map((project) =>
-        <Tile
-          name={project.name}
-          description={project.description}
-          repoUrl={project.html_url}
-          demoUrl={project.homepage}
-        />
-      )
-      }
-    </List>
-  );
+    case "success":
+      return <Repositories projects={projects} />
+
+    default:
+      throw new Error(`incorrect status: ${status}`);
+  }
 };
