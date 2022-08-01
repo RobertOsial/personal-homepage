@@ -15,9 +15,11 @@ export const Repositories = ({ projects }) => (
     {projects.map(({ id, name, description, html_url, homepage }) => (
       <Tile key={id}>
         <Title>{name}</Title>
-        <Description>
-          {description}
-        </Description>
+        {!!description && (
+          <Description>
+            {description}
+          </Description>
+        )}
         <Links>
           {!!homepage && (
             <LinksRow>
